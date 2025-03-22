@@ -29,7 +29,7 @@ public class EnemySpawner : MonoBehaviour
                     (
                         currentWave.GetEnemyPrefab(i),
                         currentWave.GetStartingWaypoint().position,
-                        Quaternion.identity,
+                        Quaternion.Euler(0, 0, 180),
                         transform
                     );
 
