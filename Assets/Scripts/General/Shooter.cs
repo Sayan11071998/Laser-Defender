@@ -19,10 +19,7 @@ public class Shooter : MonoBehaviour
     private Coroutine firingCoroutine;
     private AudioPlayer audioPlayer;
 
-    private void Awake()
-    {
-        audioPlayer = FindAnyObjectByType<AudioPlayer>();
-    }
+    private void Awake() => audioPlayer = FindAnyObjectByType<AudioPlayer>();
 
     private void Start()
     {
@@ -30,10 +27,7 @@ public class Shooter : MonoBehaviour
             isFiring = true;
     }
 
-    private void Update()
-    {
-        Fire();
-    }
+    private void Update() => Fire();
 
     private void Fire()
     {

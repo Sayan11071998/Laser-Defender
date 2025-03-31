@@ -13,10 +13,7 @@ public class AudioPlayer : MonoBehaviour
 
     private static AudioPlayer instance;
 
-    private void Awake()
-    {
-        ManageSingleton();
-    }
+    private void Awake() => ManageSingleton();
 
     private void ManageSingleton()
     {
@@ -32,15 +29,8 @@ public class AudioPlayer : MonoBehaviour
         }
     }
 
-    public void PlayShootingClip()
-    {
-        PlayClip(shootingClip, shootingVolume);
-    }
-
-    public void PlaydamageClip()
-    {
-        PlayClip(damageClip, damageVolume);
-    }
+    public void PlayShootingClip() => PlayClip(shootingClip, shootingVolume);
+    public void PlaydamageClip() => PlayClip(damageClip, damageVolume);
 
     private void PlayClip(AudioClip clip, float volume)
     {

@@ -7,10 +7,7 @@ public class SpriteScroller : MonoBehaviour
     private Vector2 offset;
     private Material material;
 
-    private void Awake()
-    {
-        material = GetComponent<SpriteRenderer>().material;
-    }
+    private void Awake() => material = GetComponent<SpriteRenderer>().material;
 
     private void Update()
     {

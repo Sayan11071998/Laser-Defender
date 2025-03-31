@@ -8,15 +8,8 @@ public class CameraShake : MonoBehaviour
 
     private Vector3 initialPosition;
 
-    private void Start()
-    {
-        initialPosition = transform.position;
-    }
-
-    public void Play()
-    {
-        StartCoroutine(Shake());
-    }
+    private void Start() => initialPosition = transform.position;
+    public void Play() => StartCoroutine(Shake());
 
     IEnumerator Shake()
     {
@@ -28,7 +21,7 @@ public class CameraShake : MonoBehaviour
             elaspedTime += Time.deltaTime;
             yield return new WaitForEndOfFrame();
         }
-        
+
         transform.position = initialPosition;
     }
 }

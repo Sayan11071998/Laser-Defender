@@ -100,7 +100,7 @@ GameObject:
   - component: {fileID: 4313083336004169190}
   - component: {fileID: 3647074804476380798}
   m_Layer: 7
-  m_Name: Projectile_Enemy
+  m_Name: Projectile_Enemy0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -198,4 +198,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd1009c3133b2e24aa70c3d8894156ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 30
+  damage: 10

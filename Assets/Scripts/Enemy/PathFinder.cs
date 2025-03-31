@@ -8,10 +8,7 @@ public class PathFinder : MonoBehaviour
     private List<Transform> waypoints;
     private int waypointIndex = 0;
 
-    private void Awake()
-    {
-        enemySpawner = FindAnyObjectByType<EnemySpawner>();
-    }
+    private void Awake() => enemySpawner = FindAnyObjectByType<EnemySpawner>();
 
     private void Start()
     {
@@ -20,10 +17,7 @@ public class PathFinder : MonoBehaviour
         transform.position = waypoints[waypointIndex].position;
     }
 
-    private void Update()
-    {
-        FollowPath();
-    }
+    private void Update() => FollowPath();
 
     private void FollowPath()
     {

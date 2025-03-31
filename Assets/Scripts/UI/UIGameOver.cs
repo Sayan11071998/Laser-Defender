@@ -7,13 +7,6 @@ public class UIGameOver : MonoBehaviour
 
     private ScoreKeeper scoreKeeper;
 
-    private void Awake()
-    {
-        scoreKeeper = FindFirstObjectByType<ScoreKeeper>();
-    }
-
-    private void Start()
-    {
-        scoreText.text = "You Scored:\n" + scoreKeeper.GetScore();
-    }
+    private void Awake() => scoreKeeper = FindFirstObjectByType<ScoreKeeper>();
+    private void Start() => scoreText.text = "You Scored:\n" + scoreKeeper.GetScore();
 }

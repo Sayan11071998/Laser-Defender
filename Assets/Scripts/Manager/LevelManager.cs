@@ -8,10 +8,7 @@ public class LevelManager : MonoBehaviour
 
     private ScoreKeeper scoreKeeper;
 
-    private void Awake()
-    {
-        scoreKeeper = FindFirstObjectByType<ScoreKeeper>();
-    }
+    private void Awake() => scoreKeeper = FindFirstObjectByType<ScoreKeeper>();
 
     public void LoadGame()
     {
@@ -19,20 +16,11 @@ public class LevelManager : MonoBehaviour
         SceneManager.LoadScene("Gameplay");
     }
 
-    public void LoadMainMenu()
-    {
-        SceneManager.LoadScene("MainMenu");
-    }
+    public void LoadMainMenu() => SceneManager.LoadScene("MainMenu");
 
-    public void LoadGameOver()
-    {
-        StartCoroutine(WaitAndLoad("GameOver", sceneLoadDelay));
-    }
+    public void LoadGameOver() => StartCoroutine(WaitAndLoad("GameOver", sceneLoadDelay));
 
-    public void QuitGame()
-    {
-        Application.Quit();
-    }
+    public void QuitGame() => Application.Quit();
 
     IEnumerator WaitAndLoad(string sceneName, float delay)
     {

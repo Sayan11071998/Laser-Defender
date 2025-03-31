@@ -61,13 +61,9 @@ public class Health : MonoBehaviour
     private void Die()
     {
         if (!isPlayer)
-        {
             scoreKeeper.ModifyScore(score);
-        }
         else
-        {
             levelManager.LoadGameOver();
-        }
 
         Destroy(gameObject);
     }

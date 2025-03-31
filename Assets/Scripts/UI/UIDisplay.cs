@@ -13,15 +13,8 @@ public class UIDisplay : MonoBehaviour
 
     private ScoreKeeper scoreKeeper;
 
-    private void Awake()
-    {
-        scoreKeeper = FindAnyObjectByType<ScoreKeeper>();
-    }
-
-    private void Start()
-    {
-        healthSlider.maxValue = playerHealth.GetHealth();
-    }
+    private void Awake() => scoreKeeper = FindAnyObjectByType<ScoreKeeper>();
+    private void Start() => healthSlider.maxValue = playerHealth.GetHealth();
 
     private void Update()
     {
